@@ -78,7 +78,7 @@ SELECT AVG(age) AS average_age FROM people WHERE department_id = 2;
 
 Q10.
 
-SELECT p.person_id, p.name, r.content FROM people p JOIN reports r USING (person_id);
+SELECT p.department_id, p.name, r.content FROM people p JOIN reports r USING (person_id);
 
 Q11.
 
