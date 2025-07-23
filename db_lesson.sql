@@ -58,7 +58,7 @@ UPDATE people SET  department_id = 5 WHERE person_id = 6;
 
 Q5.
 
-SELECT name, age FROM people WHERE gender = 1 ORDER BY age ASC;
+SELECT name, age FROM people WHERE gender = 1 ORDER BY age DESC;
 
 Q6.
 
@@ -78,7 +78,7 @@ SELECT AVG(age) AS average_age FROM people WHERE department_id = 2;
 
 Q10.
 
-SELECT p.department_id, p.name, r.content FROM people p JOIN reports r USING (person_id);
+SELECT d.name, p.name, r.content FROM people AS p RIGHT OUTER JOIN reports AS r ON p.person_id = r.person_id RIGHT OUTER JOIN departments AS d ON p.department_id = d.department_id;
 
 Q11.
 
